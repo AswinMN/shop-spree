@@ -1,4 +1,4 @@
-# MOSIP Sandbox Installer
+# Spree Sandbox Installer
 
 ## Introduction
 
