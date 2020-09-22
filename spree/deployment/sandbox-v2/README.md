@@ -17,8 +17,6 @@ The sandbox has been tested with the following configuration:
 
 \* VCPU:  Virtual CPU
 
-All pods run with replication=1.  If higher replication is needed, accordingly, the number of VMs needed will be higher.
-
 ## VM setup
 ### All machines
 All machines need to have the following:
@@ -40,8 +38,8 @@ $ source  ~/.bashrc
 
 ```
 $ cd ~/
-$ git clone https://github.com/AswinMN/spree
-$ cd spree/deployment/sandbox-v2
+$ git clone https://github.com/AswinMN/shop-spree
+$ cd shop-spree/spree/deployment/sandbox-v2
 ```
 
 ##  Installing MOSIP 
