@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.services.spree.serviceName }} 
+  namespace: {{ .Values.namespace }} 
+spec:
+  ports:
+  - port: {{ .Values.services.spree.servicePort }}
+    targetPort: {{ .Values.services.spree.containerPort }}
+  selector:
+    app: {{ .Values.services.spree.serviceName }} 
+

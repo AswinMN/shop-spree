@@ -1,0 +1,21 @@
+namespace: default
+component: spree
+part-of: mosip
+activeProfileEnv: mz 
+springConfigLabel: master
+ingress:
+   namespace: default
+probe:
+  initialDelay: 60  # Seconds
+  period: 30 # Seconds
+imagePullPolicy: Always
+domainName: {{ sandbox_domain_name }}
+internalDomain: {{ clusters.mz.nodeport_node }} 
+services:
+  identity:
+    serviceName: spreecommerce 
+    dockerImage: spreecommerce/spree:latest
+    serviceName: spreecommerce
+    containerPort: 3000
+    servicePort: 80
+    ingressPath: / 

@@ -1,0 +1,724 @@
+2020-09-22 20:45:09,581 p=8849 u=mosipuser n=ansible | PLAY [console] *******************************************************************************************************************************
+2020-09-22 20:45:09,715 p=8849 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 20:45:11,330 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:45:11,374 p=8849 u=mosipuser n=ansible | TASK [Create tmp folder /tmp/mosip] **********************************************************************************************************
+2020-09-22 20:45:11,927 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:45:11,949 p=8849 u=mosipuser n=ansible | TASK [Create logs folder /tmp/mosip/logs] ****************************************************************************************************
+2020-09-22 20:45:12,252 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:45:12,256 p=8849 u=mosipuser n=ansible | PLAY [console] *******************************************************************************************************************************
+2020-09-22 20:45:12,285 p=8849 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 20:45:12,852 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:45:12,872 p=8849 u=mosipuser n=ansible | TASK [packages/epel : Install epel] **********************************************************************************************************
+2020-09-22 20:45:15,385 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:45:15,405 p=8849 u=mosipuser n=ansible | TASK [packages/pip : Install pip2] ***********************************************************************************************************
+2020-09-22 20:45:21,956 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:45:21,976 p=8849 u=mosipuser n=ansible | TASK [packages/python3 : Install python3] ****************************************************************************************************
+2020-09-22 20:45:32,090 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:45:32,110 p=8849 u=mosipuser n=ansible | TASK [packages/kubectl : Install kubectl config] *********************************************************************************************
+2020-09-22 20:45:33,190 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:45:33,209 p=8849 u=mosipuser n=ansible | TASK [packages/kubectl : Install kubectl] ****************************************************************************************************
+2020-09-22 20:46:09,049 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:46:09,069 p=8849 u=mosipuser n=ansible | TASK [packages/psql : Install psql10 rpm] ****************************************************************************************************
+2020-09-22 20:46:11,305 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:46:11,324 p=8849 u=mosipuser n=ansible | TASK [packages/psql : Install psql10] ********************************************************************************************************
+2020-09-22 20:46:29,364 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:46:29,384 p=8849 u=mosipuser n=ansible | TASK [packages/openshift : Install openshift] ************************************************************************************************
+2020-09-22 20:46:36,411 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:46:36,431 p=8849 u=mosipuser n=ansible | TASK [packages/helm-cli : Get Helm installer] ************************************************************************************************
+2020-09-22 20:46:39,566 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:46:39,586 p=8849 u=mosipuser n=ansible | TASK [packages/helm-cli : Create helm cli install dir] ***************************************************************************************
+2020-09-22 20:46:39,903 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:46:39,922 p=8849 u=mosipuser n=ansible | TASK [packages/helm-cli : Copy Helm executable] **********************************************************************************************
+2020-09-22 20:46:43,708 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:46:43,728 p=8849 u=mosipuser n=ansible | TASK [packages/helm-cli : Add stable repo] ***************************************************************************************************
+2020-09-22 20:46:46,127 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:46:46,146 p=8849 u=mosipuser n=ansible | TASK [packages/helm-cli : Update Helm repo] **************************************************************************************************
+2020-09-22 20:46:48,258 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:46:48,277 p=8849 u=mosipuser n=ansible | TASK [packages/policycoreutils-python : Install policycoreutils-python] **********************************************************************
+2020-09-22 20:46:48,876 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:46:48,896 p=8849 u=mosipuser n=ansible | TASK [Set read permission to home directory needed for nginx] ********************************************************************************
+2020-09-22 20:46:49,218 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:46:49,237 p=8849 u=mosipuser n=ansible | TASK [Change selinux to permissive mode.] ****************************************************************************************************
+2020-09-22 20:46:50,122 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:46:50,126 p=8849 u=mosipuser n=ansible | PLAY [nginxserver] ***************************************************************************************************************************
+2020-09-22 20:46:50,152 p=8849 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 20:46:50,733 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:46:50,752 p=8849 u=mosipuser n=ansible | TASK [packages/epel : Install epel] **********************************************************************************************************
+2020-09-22 20:46:52,637 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:46:52,657 p=8849 u=mosipuser n=ansible | TASK [nginx : include_tasks] *****************************************************************************************************************
+2020-09-22 20:46:52,696 p=8849 u=mosipuser n=ansible | included: /home/mosipuser/mosip-infra/deployment/sandbox-v2/roles/nginx/tasks/install_nginx.yml for console.sb
+2020-09-22 20:46:52,717 p=8849 u=mosipuser n=ansible | TASK [Install nginx] *************************************************************************************************************************
+2020-09-22 20:46:59,840 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:46:59,860 p=8849 u=mosipuser n=ansible | TASK [Copy the default nginx conf file] ******************************************************************************************************
+2020-09-22 20:47:00,599 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:47:00,620 p=8849 u=mosipuser n=ansible | TASK [Restart nginx] *************************************************************************************************************************
+2020-09-22 20:47:01,027 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:47:01,046 p=8849 u=mosipuser n=ansible | TASK [nginx : include_tasks] *****************************************************************************************************************
+2020-09-22 20:47:01,066 p=8849 u=mosipuser n=ansible | skipping: [console.sb]
+2020-09-22 20:47:01,085 p=8849 u=mosipuser n=ansible | TASK [letsencrypt : Install virtualenv] ******************************************************************************************************
+2020-09-22 20:47:04,918 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:47:04,937 p=8849 u=mosipuser n=ansible | TASK [letsencrypt : Install certbot in python3 virtual environment] **************************************************************************
+2020-09-22 20:47:18,784 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:47:18,803 p=8849 u=mosipuser n=ansible | TASK [letsencrypt : Install certbot-nginx] ***************************************************************************************************
+2020-09-22 20:47:20,752 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:47:20,771 p=8849 u=mosipuser n=ansible | TASK [letsencrypt : run certbot] *************************************************************************************************************
+2020-09-22 20:47:30,554 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:47:30,574 p=8849 u=mosipuser n=ansible | TASK [letsencrypt : debug] *******************************************************************************************************************
+2020-09-22 20:47:30,600 p=8849 u=mosipuser n=ansible | ok: [console.sb] => {
+    "msg": {
+        "changed": true, 
+        "cmd": [
+            "/home/mosipuser/.venv-py3/bin/certbot", 
+            "certonly", 
+            "--nginx", 
+            "-n", 
+            "-m", 
+            "info@mosip.io", 
+            "--agree-tos", 
+            "-d", 
+            "shop.beaswathitraders.net"
+        ], 
+        "delta": "0:00:09.456755", 
+        "end": "2020-09-22 20:47:30.511095", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2020-09-22 20:47:21.054340", 
+        "stderr": "Saving debug log to /var/log/letsencrypt/letsencrypt.log\nPlugins selected: Authenticator nginx, Installer nginx\nObtaining a new certificate\nPerforming the following challenges:\nhttp-01 challenge for shop.beaswathitraders.net\nWaiting for verification...\nCleaning up challenges", 
+        "stderr_lines": [
+            "Saving debug log to /var/log/letsencrypt/letsencrypt.log", 
+            "Plugins selected: Authenticator nginx, Installer nginx", 
+            "Obtaining a new certificate", 
+            "Performing the following challenges:", 
+            "http-01 challenge for shop.beaswathitraders.net", 
+            "Waiting for verification...", 
+            "Cleaning up challenges"
+        ], 
+        "stdout": "IMPORTANT NOTES:\n - Congratulations! Your certificate and chain have been saved at:\n   /etc/letsencrypt/live/shop.beaswathitraders.net/fullchain.pem\n   Your key file has been saved at:\n   /etc/letsencrypt/live/shop.beaswathitraders.net/privkey.pem\n   Your cert will expire on 2020-12-21. To obtain a new or tweaked\n   version of this certificate in the future, simply run certbot\n   again. To non-interactively renew *all* of your certificates, run\n   \"certbot renew\"\n - Your account credentials have been saved in your Certbot\n   configuration directory at /etc/letsencrypt. You should make a\n   secure backup of this folder now. This configuration directory will\n   also contain certificates and private keys obtained by Certbot so\n   making regular backups of this folder is ideal.\n - If you like Certbot, please consider supporting our work by:\n\n   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate\n   Donating to EFF:                    https://eff.org/donate-le", 
+        "stdout_lines": [
+            "IMPORTANT NOTES:", 
+            " - Congratulations! Your certificate and chain have been saved at:", 
+            "   /etc/letsencrypt/live/shop.beaswathitraders.net/fullchain.pem", 
+            "   Your key file has been saved at:", 
+            "   /etc/letsencrypt/live/shop.beaswathitraders.net/privkey.pem", 
+            "   Your cert will expire on 2020-12-21. To obtain a new or tweaked", 
+            "   version of this certificate in the future, simply run certbot", 
+            "   again. To non-interactively renew *all* of your certificates, run", 
+            "   \"certbot renew\"", 
+            " - Your account credentials have been saved in your Certbot", 
+            "   configuration directory at /etc/letsencrypt. You should make a", 
+            "   secure backup of this folder now. This configuration directory will", 
+            "   also contain certificates and private keys obtained by Certbot so", 
+            "   making regular backups of this folder is ideal.", 
+            " - If you like Certbot, please consider supporting our work by:", 
+            "", 
+            "   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate", 
+            "   Donating to EFF:                    https://eff.org/donate-le"
+        ]
+    }
+}
+2020-09-22 20:47:30,620 p=8849 u=mosipuser n=ansible | TASK [nginx : include_tasks] *****************************************************************************************************************
+2020-09-22 20:47:30,649 p=8849 u=mosipuser n=ansible | included: /home/mosipuser/mosip-infra/deployment/sandbox-v2/roles/nginx/tasks/install_nginx.yml for console.sb
+2020-09-22 20:47:30,670 p=8849 u=mosipuser n=ansible | TASK [Install nginx] *************************************************************************************************************************
+2020-09-22 20:47:31,280 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:47:31,299 p=8849 u=mosipuser n=ansible | TASK [Copy the default nginx conf file] ******************************************************************************************************
+2020-09-22 20:47:31,846 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:47:31,865 p=8849 u=mosipuser n=ansible | TASK [Restart nginx] *************************************************************************************************************************
+2020-09-22 20:47:32,272 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:47:32,291 p=8849 u=mosipuser n=ansible | TASK [nginx : include_tasks] *****************************************************************************************************************
+2020-09-22 20:47:32,329 p=8849 u=mosipuser n=ansible | included: /home/mosipuser/mosip-infra/deployment/sandbox-v2/roles/nginx/tasks/update_conf.yml for console.sb
+2020-09-22 20:47:32,353 p=8849 u=mosipuser n=ansible | TASK [nginx conf template nginx_https_conf.yml.j2 to yml] ************************************************************************************
+2020-09-22 20:47:32,953 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:47:32,972 p=8849 u=mosipuser n=ansible | TASK [nginx : Copy new conf file] ************************************************************************************************************
+2020-09-22 20:47:34,112 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:47:34,131 p=8849 u=mosipuser n=ansible | TASK [nginx index.html template to yaml] *****************************************************************************************************
+2020-09-22 20:47:34,696 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:47:34,717 p=8849 u=mosipuser n=ansible | TASK [nginx : Copy index file] ***************************************************************************************************************
+2020-09-22 20:47:35,315 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:47:35,335 p=8849 u=mosipuser n=ansible | TASK [nginx : Set symlink to mosip versions file] ********************************************************************************************
+2020-09-22 20:47:35,665 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:47:35,684 p=8849 u=mosipuser n=ansible | TASK [Restart nginx] *************************************************************************************************************************
+2020-09-22 20:47:36,091 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:47:36,095 p=8849 u=mosipuser n=ansible | PLAY [all] ***********************************************************************************************************************************
+2020-09-22 20:47:36,116 p=8849 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 20:47:37,113 p=8849 u=mosipuser n=ansible | ok: [mzmaster.sb]
+2020-09-22 20:47:37,326 p=8849 u=mosipuser n=ansible | ok: [mzworker0.sb]
+2020-09-22 20:47:37,341 p=8849 u=mosipuser n=ansible | ok: [mzworker1.sb]
+2020-09-22 20:47:37,726 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:47:37,745 p=8849 u=mosipuser n=ansible | TASK [packages/nfs-utils : Install nfs utils] ************************************************************************************************
+2020-09-22 20:47:38,391 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:47:39,369 p=8849 u=mosipuser n=ansible | ok: [mzmaster.sb]
+2020-09-22 20:47:40,449 p=8849 u=mosipuser n=ansible | ok: [mzworker0.sb]
+2020-09-22 20:47:40,472 p=8849 u=mosipuser n=ansible | ok: [mzworker1.sb]
+2020-09-22 20:47:40,476 p=8849 u=mosipuser n=ansible | PLAY [nfsserver] *****************************************************************************************************************************
+2020-09-22 20:47:40,499 p=8849 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 20:47:41,083 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:47:41,103 p=8849 u=mosipuser n=ansible | TASK [nfs-server : Add user nfsnobody] *******************************************************************************************************
+2020-09-22 20:47:41,812 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:47:41,832 p=8849 u=mosipuser n=ansible | TASK [nfs-server : Create nfs mount folder] **************************************************************************************************
+2020-09-22 20:47:42,156 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:47:42,175 p=8849 u=mosipuser n=ansible | TASK [nfs-server : Install nfs utils] ********************************************************************************************************
+2020-09-22 20:47:42,782 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:47:42,801 p=8849 u=mosipuser n=ansible | TASK [nfs-server : Enable nfs server] ********************************************************************************************************
+2020-09-22 20:47:43,192 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:47:43,212 p=8849 u=mosipuser n=ansible | TASK [nfs-server : Start  nfs server] ********************************************************************************************************
+2020-09-22 20:47:44,027 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:47:44,046 p=8849 u=mosipuser n=ansible | TASK [nfs-server : Update /etc/exports file] *************************************************************************************************
+2020-09-22 20:47:44,641 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:47:44,660 p=8849 u=mosipuser n=ansible | TASK [nfs-server : exportfs] *****************************************************************************************************************
+2020-09-22 20:47:44,981 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:47:44,987 p=8849 u=mosipuser n=ansible | PLAY [mzcluster] *****************************************************************************************************************************
+2020-09-22 20:47:45,012 p=8849 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 20:47:45,567 p=8849 u=mosipuser n=ansible | ok: [mzmaster.sb]
+2020-09-22 20:47:45,585 p=8849 u=mosipuser n=ansible | ok: [mzworker0.sb]
+2020-09-22 20:47:45,606 p=8849 u=mosipuser n=ansible | ok: [mzworker1.sb]
+2020-09-22 20:47:45,625 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Get os_version from /etc/os-release] *******************************************************************
+2020-09-22 20:47:45,649 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:47:45,670 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:47:45,679 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:47:45,697 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Get distro name from /etc/os-release] ******************************************************************
+2020-09-22 20:47:45,723 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:47:45,745 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:47:45,754 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:47:45,773 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Set fact ansible_os_family var to Debian] **************************************************************
+2020-09-22 20:47:45,799 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:47:45,822 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:47:45,831 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:47:45,850 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Set fact ansible_os_family var to Debian] **************************************************************
+2020-09-22 20:47:45,876 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:47:45,904 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:47:45,913 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:47:45,932 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Set fact ansible_os_family var to RedHat] **************************************************************
+2020-09-22 20:47:45,958 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:47:45,980 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:47:45,990 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:47:46,008 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Override config file directory for Debian] *************************************************************
+2020-09-22 20:47:46,035 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:47:46,057 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:47:46,071 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:47:46,089 p=8849 u=mosipuser n=ansible | TASK [k8scluster/docker : Install Docker container engine] ***********************************************************************************
+2020-09-22 20:47:46,201 p=8849 u=mosipuser n=ansible | included: /home/mosipuser/mosip-infra/deployment/sandbox-v2/roles/k8scluster/docker/tasks/pkg.yml for mzmaster.sb, mzworker0.sb, mzworker1.sb
+2020-09-22 20:47:46,226 p=8849 u=mosipuser n=ansible | TASK [k8scluster/docker : Install apt-transport-https] ***************************************************************************************
+2020-09-22 20:47:46,252 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:47:46,274 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:47:46,284 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:47:46,303 p=8849 u=mosipuser n=ansible | TASK [k8scluster/docker : Add Docker APT GPG key] ********************************************************************************************
+2020-09-22 20:47:46,327 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:47:46,349 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:47:46,359 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:47:46,378 p=8849 u=mosipuser n=ansible | TASK [k8scluster/docker : Add Docker APT repository] *****************************************************************************************
+2020-09-22 20:47:46,402 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:47:46,424 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:47:46,433 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:47:46,453 p=8849 u=mosipuser n=ansible | TASK [k8scluster/docker : Add Docker yum repository] *****************************************************************************************
+2020-09-22 20:47:46,969 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb]
+2020-09-22 20:47:46,973 p=8849 u=mosipuser n=ansible | changed: [mzworker1.sb]
+2020-09-22 20:47:46,974 p=8849 u=mosipuser n=ansible | changed: [mzworker0.sb]
+2020-09-22 20:47:46,993 p=8849 u=mosipuser n=ansible | TASK [k8scluster/docker : Install docker engine (RHEL/CentOS)] *******************************************************************************
+2020-09-22 20:48:30,372 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb]
+2020-09-22 20:48:31,105 p=8849 u=mosipuser n=ansible | changed: [mzworker1.sb]
+2020-09-22 20:48:34,493 p=8849 u=mosipuser n=ansible | changed: [mzworker0.sb]
+2020-09-22 20:48:34,512 p=8849 u=mosipuser n=ansible | TASK [k8scluster/docker : Install docker engine (Debian/Ubuntu)] *****************************************************************************
+2020-09-22 20:48:34,539 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:48:34,563 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:48:34,575 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:48:34,594 p=8849 u=mosipuser n=ansible | TASK [k8scluster/docker : Hold docker version] ***********************************************************************************************
+2020-09-22 20:48:34,619 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:48:34,641 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:48:34,652 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:48:34,672 p=8849 u=mosipuser n=ansible | TASK [k8scluster/docker : Copy Docker engine service file] ***********************************************************************************
+2020-09-22 20:48:35,275 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb]
+2020-09-22 20:48:35,458 p=8849 u=mosipuser n=ansible | changed: [mzworker1.sb]
+2020-09-22 20:48:35,470 p=8849 u=mosipuser n=ansible | changed: [mzworker0.sb]
+2020-09-22 20:48:35,488 p=8849 u=mosipuser n=ansible | TASK [k8scluster/docker : Copy Docker environment config file] *******************************************************************************
+2020-09-22 20:48:36,046 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb]
+2020-09-22 20:48:36,081 p=8849 u=mosipuser n=ansible | changed: [mzworker0.sb]
+2020-09-22 20:48:36,094 p=8849 u=mosipuser n=ansible | changed: [mzworker1.sb]
+2020-09-22 20:48:36,113 p=8849 u=mosipuser n=ansible | TASK [k8scluster/docker : Add any insecure registries to Docker config] **********************************************************************
+2020-09-22 20:48:36,405 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb]
+2020-09-22 20:48:36,433 p=8849 u=mosipuser n=ansible | changed: [mzworker0.sb]
+2020-09-22 20:48:36,454 p=8849 u=mosipuser n=ansible | changed: [mzworker1.sb]
+2020-09-22 20:48:36,472 p=8849 u=mosipuser n=ansible | TASK [k8scluster/docker : Add registry to Docker config] *************************************************************************************
+2020-09-22 20:48:36,496 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:48:36,519 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:48:36,528 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:48:36,547 p=8849 u=mosipuser n=ansible | TASK [k8scluster/docker : Enable and check Docker service] ***********************************************************************************
+2020-09-22 20:48:39,688 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb]
+2020-09-22 20:48:55,101 p=8849 u=mosipuser n=ansible | changed: [mzworker1.sb]
+2020-09-22 20:48:59,271 p=8849 u=mosipuser n=ansible | changed: [mzworker0.sb]
+2020-09-22 20:48:59,289 p=8849 u=mosipuser n=ansible | TASK [packages/git : Install git] ************************************************************************************************************
+2020-09-22 20:49:06,885 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb]
+2020-09-22 20:49:07,587 p=8849 u=mosipuser n=ansible | changed: [mzworker1.sb]
+2020-09-22 20:49:07,671 p=8849 u=mosipuser n=ansible | changed: [mzworker0.sb]
+2020-09-22 20:49:07,678 p=8849 u=mosipuser n=ansible | PLAY [mzmaster.sb] ***************************************************************************************************************************
+2020-09-22 20:49:07,710 p=8849 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 20:49:08,271 p=8849 u=mosipuser n=ansible | ok: [mzmaster.sb]
+2020-09-22 20:49:08,291 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Get os_version from /etc/os-release] *******************************************************************
+2020-09-22 20:49:08,305 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:49:08,325 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Get distro name from /etc/os-release] ******************************************************************
+2020-09-22 20:49:08,338 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:49:08,358 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Set fact ansible_os_family var to Debian] **************************************************************
+2020-09-22 20:49:08,372 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:49:08,392 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Set fact ansible_os_family var to Debian] **************************************************************
+2020-09-22 20:49:08,405 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:49:08,426 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Set fact ansible_os_family var to RedHat] **************************************************************
+2020-09-22 20:49:08,440 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:49:08,460 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Override config file directory for Debian] *************************************************************
+2020-09-22 20:49:08,516 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:49:08,536 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Get os_version from /etc/os-release] *******************************************************************
+2020-09-22 20:49:08,550 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:49:08,570 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Get distro name from /etc/os-release] ******************************************************************
+2020-09-22 20:49:08,583 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:49:08,603 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Set fact ansible_os_family var to Debian] **************************************************************
+2020-09-22 20:49:08,617 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:49:08,639 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Set fact ansible_os_family var to Debian] **************************************************************
+2020-09-22 20:49:08,651 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:49:08,672 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Set fact ansible_os_family var to RedHat] **************************************************************
+2020-09-22 20:49:08,686 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:49:08,707 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Override config file directory for Debian] *************************************************************
+2020-09-22 20:49:08,720 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:49:08,741 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Install Kubernetes packages] **************************************************************************
+2020-09-22 20:49:08,776 p=8849 u=mosipuser n=ansible | included: /home/mosipuser/mosip-infra/deployment/sandbox-v2/roles/k8scluster/commons/pre-install/tasks/pkg.yml for mzmaster.sb
+2020-09-22 20:49:08,800 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Add Kubernetes APT GPG key] ***************************************************************************
+2020-09-22 20:49:08,813 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:49:08,833 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Add Kubernetes APT repository] ************************************************************************
+2020-09-22 20:49:08,847 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:49:08,867 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Add Kubernetes yum repository] ************************************************************************
+2020-09-22 20:49:09,150 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb]
+2020-09-22 20:49:09,171 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Install kubernetes packages (RHEL/CentOS)] ************************************************************
+2020-09-22 20:49:55,597 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb] => (item=kubelet)
+2020-09-22 20:49:56,318 p=8849 u=mosipuser n=ansible | ok: [mzmaster.sb] => (item=kubeadm)
+2020-09-22 20:49:57,045 p=8849 u=mosipuser n=ansible | ok: [mzmaster.sb] => (item=kubectl)
+2020-09-22 20:49:57,068 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Install kubernetes packages (Debian/Ubuntu)] **********************************************************
+2020-09-22 20:49:57,092 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb] => (item=kubelet) 
+2020-09-22 20:49:57,097 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb] => (item=kubeadm) 
+2020-09-22 20:49:57,104 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb] => (item=kubectl) 
+2020-09-22 20:49:57,125 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Disable system swap] **********************************************************************************
+2020-09-22 20:49:57,398 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb]
+2020-09-22 20:49:57,419 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Remove current swaps from fstab] **********************************************************************
+2020-09-22 20:49:57,696 p=8849 u=mosipuser n=ansible | ok: [mzmaster.sb]
+2020-09-22 20:49:57,717 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Disable swappiness and pass bridged IPv4 traffic to iptable's chains] *********************************
+2020-09-22 20:49:58,270 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb] => (item={u'name': u'vm.swappiness', u'value': u'0'})
+2020-09-22 20:49:58,544 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb] => (item={u'name': u'net.bridge.bridge-nf-call-iptables', u'value': u'1'})
+2020-09-22 20:49:58,565 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Create service drop-in directory] *********************************************************************
+2020-09-22 20:49:58,848 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb]
+2020-09-22 20:49:58,869 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Copy kubeadm conf to drop-in directory] ***************************************************************
+2020-09-22 20:49:59,392 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb]
+2020-09-22 20:49:59,413 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Reload kubelet daemon] ********************************************************************************
+2020-09-22 20:49:59,910 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb]
+2020-09-22 20:49:59,930 p=8849 u=mosipuser n=ansible | TASK [k8scluster/kubernetes/master : Check if kubeadm has already run] ***********************************************************************
+2020-09-22 20:50:00,198 p=8849 u=mosipuser n=ansible | ok: [mzmaster.sb]
+2020-09-22 20:50:00,218 p=8849 u=mosipuser n=ansible | TASK [k8scluster/kubernetes/master : Init cluster if needed] *********************************************************************************
+2020-09-22 20:50:00,258 p=8849 u=mosipuser n=ansible | included: /home/mosipuser/mosip-infra/deployment/sandbox-v2/roles/k8scluster/kubernetes/master/tasks/init.yml for mzmaster.sb
+2020-09-22 20:50:00,281 p=8849 u=mosipuser n=ansible | TASK [k8scluster/kubernetes/master : Reset Kubernetes component] *****************************************************************************
+2020-09-22 20:50:00,651 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb]
+2020-09-22 20:50:00,672 p=8849 u=mosipuser n=ansible | TASK [k8scluster/kubernetes/master : Init Kubernetes cluster] ********************************************************************************
+2020-09-22 20:50:40,916 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb]
+2020-09-22 20:50:40,936 p=8849 u=mosipuser n=ansible | TASK [k8scluster/kubernetes/master : Create Kubernetes config directory] *********************************************************************
+2020-09-22 20:50:41,283 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb]
+2020-09-22 20:50:41,304 p=8849 u=mosipuser n=ansible | TASK [k8scluster/kubernetes/master : Copy admin.conf to Home directory] **********************************************************************
+2020-09-22 20:50:41,605 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb]
+2020-09-22 20:50:41,625 p=8849 u=mosipuser n=ansible | TASK [k8scluster/kubernetes/master : Enable and check kubelet service] ***********************************************************************
+2020-09-22 20:50:42,116 p=8849 u=mosipuser n=ansible | ok: [mzmaster.sb]
+2020-09-22 20:50:42,136 p=8849 u=mosipuser n=ansible | TASK [k8scluster/kubernetes/master : Make sure .kube file is present on console] *************************************************************
+2020-09-22 20:50:42,429 p=8849 u=mosipuser n=ansible | ok: [mzmaster.sb]
+2020-09-22 20:50:42,451 p=8849 u=mosipuser n=ansible | TASK [k8scluster/kubernetes/master : Copy config file to console machine for kubectl] ********************************************************
+2020-09-22 20:50:43,003 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb]
+2020-09-22 20:50:43,024 p=8849 u=mosipuser n=ansible | TASK [k8scluster/cni : Create Kubernetes addon directory] ************************************************************************************
+2020-09-22 20:50:43,318 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb]
+2020-09-22 20:50:43,340 p=8849 u=mosipuser n=ansible | TASK [k8scluster/cni : Copy flannel YAML files] **********************************************************************************************
+2020-09-22 20:50:43,914 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb] => (item=/home/mosipuser/mosip-infra/deployment/sandbox-v2/roles/k8scluster/cni/tasks/../templates/flannel.yml.j2)
+2020-09-22 20:50:43,957 p=8849 u=mosipuser n=ansible | TASK [k8scluster/cni : Check flannel daemonset is working] ***********************************************************************************
+2020-09-22 20:50:44,426 p=8849 u=mosipuser n=ansible | fatal: [mzmaster.sb -> mzmaster.sb]: FAILED! => {"changed": false, "cmd": "kubectl --kubeconfig=/etc/kubernetes/admin.conf get ds --all-namespaces | grep flannel", "delta": "0:00:00.186435", "end": "2020-09-22 20:50:44.388211", "msg": "non-zero return code", "rc": 1, "start": "2020-09-22 20:50:44.201776", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2020-09-22 20:50:44,426 p=8849 u=mosipuser n=ansible | ...ignoring
+2020-09-22 20:50:44,470 p=8849 u=mosipuser n=ansible | TASK [k8scluster/cni : Create flannel network daemonset] *************************************************************************************
+2020-09-22 20:50:45,055 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb -> mzmaster.sb]
+2020-09-22 20:50:45,062 p=8849 u=mosipuser n=ansible | PLAY [mzworkers] *****************************************************************************************************************************
+2020-09-22 20:50:45,091 p=8849 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 20:50:45,929 p=8849 u=mosipuser n=ansible | ok: [mzworker0.sb]
+2020-09-22 20:50:45,953 p=8849 u=mosipuser n=ansible | ok: [mzworker1.sb]
+2020-09-22 20:50:45,973 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Get os_version from /etc/os-release] *******************************************************************
+2020-09-22 20:50:45,999 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:50:46,009 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:50:46,029 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Get distro name from /etc/os-release] ******************************************************************
+2020-09-22 20:50:46,057 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:50:46,066 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:50:46,087 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Set fact ansible_os_family var to Debian] **************************************************************
+2020-09-22 20:50:46,112 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:50:46,122 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:50:46,142 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Set fact ansible_os_family var to Debian] **************************************************************
+2020-09-22 20:50:46,168 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:50:46,178 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:50:46,199 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Set fact ansible_os_family var to RedHat] **************************************************************
+2020-09-22 20:50:46,226 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:50:46,235 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:50:46,256 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Override config file directory for Debian] *************************************************************
+2020-09-22 20:50:46,283 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:50:46,293 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:50:46,313 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Get os_version from /etc/os-release] *******************************************************************
+2020-09-22 20:50:46,409 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:50:46,413 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:50:46,435 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Get distro name from /etc/os-release] ******************************************************************
+2020-09-22 20:50:46,462 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:50:46,471 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:50:46,492 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Set fact ansible_os_family var to Debian] **************************************************************
+2020-09-22 20:50:46,518 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:50:46,527 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:50:46,548 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Set fact ansible_os_family var to Debian] **************************************************************
+2020-09-22 20:50:46,574 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:50:46,583 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:50:46,604 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Set fact ansible_os_family var to RedHat] **************************************************************
+2020-09-22 20:50:46,633 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:50:46,642 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:50:46,662 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/os-checker : Override config file directory for Debian] *************************************************************
+2020-09-22 20:50:46,689 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:50:46,700 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:50:46,720 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Install Kubernetes packages] **************************************************************************
+2020-09-22 20:50:46,796 p=8849 u=mosipuser n=ansible | included: /home/mosipuser/mosip-infra/deployment/sandbox-v2/roles/k8scluster/commons/pre-install/tasks/pkg.yml for mzworker0.sb, mzworker1.sb
+2020-09-22 20:50:46,822 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Add Kubernetes APT GPG key] ***************************************************************************
+2020-09-22 20:50:46,848 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:50:46,858 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:50:46,880 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Add Kubernetes APT repository] ************************************************************************
+2020-09-22 20:50:46,906 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb]
+2020-09-22 20:50:46,915 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb]
+2020-09-22 20:50:46,935 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Add Kubernetes yum repository] ************************************************************************
+2020-09-22 20:50:47,220 p=8849 u=mosipuser n=ansible | changed: [mzworker0.sb]
+2020-09-22 20:50:47,241 p=8849 u=mosipuser n=ansible | changed: [mzworker1.sb]
+2020-09-22 20:50:47,261 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Install kubernetes packages (RHEL/CentOS)] ************************************************************
+2020-09-22 20:51:24,683 p=8849 u=mosipuser n=ansible | changed: [mzworker1.sb] => (item=kubelet)
+2020-09-22 20:51:24,715 p=8849 u=mosipuser n=ansible | changed: [mzworker0.sb] => (item=kubelet)
+2020-09-22 20:51:25,415 p=8849 u=mosipuser n=ansible | ok: [mzworker1.sb] => (item=kubeadm)
+2020-09-22 20:51:25,446 p=8849 u=mosipuser n=ansible | ok: [mzworker0.sb] => (item=kubeadm)
+2020-09-22 20:51:25,468 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Install kubernetes packages (Debian/Ubuntu)] **********************************************************
+2020-09-22 20:51:25,497 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb] => (item=kubelet) 
+2020-09-22 20:51:25,500 p=8849 u=mosipuser n=ansible | skipping: [mzworker0.sb] => (item=kubeadm) 
+2020-09-22 20:51:25,519 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb] => (item=kubelet) 
+2020-09-22 20:51:25,525 p=8849 u=mosipuser n=ansible | skipping: [mzworker1.sb] => (item=kubeadm) 
+2020-09-22 20:51:25,546 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Disable system swap] **********************************************************************************
+2020-09-22 20:51:25,824 p=8849 u=mosipuser n=ansible | changed: [mzworker0.sb]
+2020-09-22 20:51:25,846 p=8849 u=mosipuser n=ansible | changed: [mzworker1.sb]
+2020-09-22 20:51:25,867 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Remove current swaps from fstab] **********************************************************************
+2020-09-22 20:51:26,150 p=8849 u=mosipuser n=ansible | ok: [mzworker0.sb]
+2020-09-22 20:51:26,172 p=8849 u=mosipuser n=ansible | ok: [mzworker1.sb]
+2020-09-22 20:51:26,193 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Disable swappiness and pass bridged IPv4 traffic to iptable's chains] *********************************
+2020-09-22 20:51:26,494 p=8849 u=mosipuser n=ansible | changed: [mzworker0.sb] => (item={u'name': u'vm.swappiness', u'value': u'0'})
+2020-09-22 20:51:26,516 p=8849 u=mosipuser n=ansible | changed: [mzworker1.sb] => (item={u'name': u'vm.swappiness', u'value': u'0'})
+2020-09-22 20:51:26,774 p=8849 u=mosipuser n=ansible | changed: [mzworker0.sb] => (item={u'name': u'net.bridge.bridge-nf-call-iptables', u'value': u'1'})
+2020-09-22 20:51:26,794 p=8849 u=mosipuser n=ansible | changed: [mzworker1.sb] => (item={u'name': u'net.bridge.bridge-nf-call-iptables', u'value': u'1'})
+2020-09-22 20:51:26,814 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Create service drop-in directory] *********************************************************************
+2020-09-22 20:51:27,105 p=8849 u=mosipuser n=ansible | changed: [mzworker0.sb]
+2020-09-22 20:51:27,127 p=8849 u=mosipuser n=ansible | changed: [mzworker1.sb]
+2020-09-22 20:51:27,148 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Copy kubeadm conf to drop-in directory] ***************************************************************
+2020-09-22 20:51:27,685 p=8849 u=mosipuser n=ansible | changed: [mzworker0.sb]
+2020-09-22 20:51:27,705 p=8849 u=mosipuser n=ansible | changed: [mzworker1.sb]
+2020-09-22 20:51:27,726 p=8849 u=mosipuser n=ansible | TASK [k8scluster/commons/pre-install : Reload kubelet daemon] ********************************************************************************
+2020-09-22 20:51:28,245 p=8849 u=mosipuser n=ansible | changed: [mzworker0.sb]
+2020-09-22 20:51:28,262 p=8849 u=mosipuser n=ansible | changed: [mzworker1.sb]
+2020-09-22 20:51:28,282 p=8849 u=mosipuser n=ansible | TASK [k8scluster/kubernetes/node : Check if kubelet.conf exists] *****************************************************************************
+2020-09-22 20:51:28,557 p=8849 u=mosipuser n=ansible | ok: [mzworker0.sb]
+2020-09-22 20:51:28,574 p=8849 u=mosipuser n=ansible | ok: [mzworker1.sb]
+2020-09-22 20:51:28,595 p=8849 u=mosipuser n=ansible | TASK [k8scluster/kubernetes/node : Join to cluster if needed] ********************************************************************************
+2020-09-22 20:51:28,675 p=8849 u=mosipuser n=ansible | included: /home/mosipuser/mosip-infra/deployment/sandbox-v2/roles/k8scluster/kubernetes/node/tasks/join.yml for mzworker0.sb, mzworker1.sb
+2020-09-22 20:51:28,699 p=8849 u=mosipuser n=ansible | TASK [k8scluster/kubernetes/node : Reset Kubernetes component] *******************************************************************************
+2020-09-22 20:51:29,074 p=8849 u=mosipuser n=ansible | changed: [mzworker0.sb]
+2020-09-22 20:51:29,092 p=8849 u=mosipuser n=ansible | changed: [mzworker1.sb]
+2020-09-22 20:51:29,113 p=8849 u=mosipuser n=ansible | TASK [k8scluster/kubernetes/node : Join to Kubernetes cluster] *******************************************************************************
+2020-09-22 20:51:35,661 p=8849 u=mosipuser n=ansible | changed: [mzworker0.sb]
+2020-09-22 20:51:35,662 p=8849 u=mosipuser n=ansible | changed: [mzworker1.sb]
+2020-09-22 20:51:35,683 p=8849 u=mosipuser n=ansible | TASK [k8scluster/kubernetes/node : Enable and check kubelet service] *************************************************************************
+2020-09-22 20:51:36,149 p=8849 u=mosipuser n=ansible | ok: [mzworker0.sb]
+2020-09-22 20:51:36,171 p=8849 u=mosipuser n=ansible | ok: [mzworker1.sb]
+2020-09-22 20:51:36,172 p=8849 u=mosipuser n=ansible | RUNNING HANDLER [k8scluster/kubernetes/node : Recreate kube-dns] *****************************************************************************
+2020-09-22 20:51:43,750 p=8849 u=mosipuser n=ansible | changed: [mzworker0.sb -> mzmaster.sb]
+2020-09-22 20:51:43,755 p=8849 u=mosipuser n=ansible | PLAY [mzmaster.sb] ***************************************************************************************************************************
+2020-09-22 20:51:43,777 p=8849 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 20:51:44,425 p=8849 u=mosipuser n=ansible | ok: [mzmaster.sb]
+2020-09-22 20:51:44,454 p=8849 u=mosipuser n=ansible | TASK [MetalLB role] **************************************************************************************************************************
+2020-09-22 20:51:44,467 p=8849 u=mosipuser n=ansible | skipping: [mzmaster.sb]
+2020-09-22 20:51:44,496 p=8849 u=mosipuser n=ansible | TASK [Healthcheck role] **********************************************************************************************************************
+2020-09-22 20:51:44,580 p=8849 u=mosipuser n=ansible | TASK [k8scluster/healthcheck : Create tmp directory] *****************************************************************************************
+2020-09-22 20:51:44,869 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb]
+2020-09-22 20:51:44,898 p=8849 u=mosipuser n=ansible | TASK [k8scluster/healthcheck : Create checkout directory] ************************************************************************************
+2020-09-22 20:51:45,186 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb]
+2020-09-22 20:51:45,215 p=8849 u=mosipuser n=ansible | TASK [k8scluster/healthcheck : Clone git repo] ***********************************************************************************************
+2020-09-22 20:51:47,985 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb]
+2020-09-22 20:51:48,015 p=8849 u=mosipuser n=ansible | TASK [k8scluster/healthcheck : Install Healthcheck] ******************************************************************************************
+2020-09-22 20:51:48,528 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb]
+2020-09-22 20:51:48,557 p=8849 u=mosipuser n=ansible | TASK [k8scluster/healthcheck : Clean-up] *****************************************************************************************************
+2020-09-22 20:51:48,849 p=8849 u=mosipuser n=ansible | changed: [mzmaster.sb]
+2020-09-22 20:51:48,852 p=8849 u=mosipuser n=ansible | PLAY [console] *******************************************************************************************************************************
+2020-09-22 20:51:48,873 p=8849 u=mosipuser n=ansible | TASK [Create ingress-nginx  namespace] *******************************************************************************************************
+2020-09-22 20:51:50,339 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:51:50,344 p=8849 u=mosipuser n=ansible | PLAY [console] *******************************************************************************************************************************
+2020-09-22 20:51:50,368 p=8849 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 20:51:50,955 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:51:50,975 p=8849 u=mosipuser n=ansible | TASK [helm : include_vars] *******************************************************************************************************************
+2020-09-22 20:51:51,047 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:51:51,066 p=8849 u=mosipuser n=ansible | TASK [helm : Convert values template to values file] *****************************************************************************************
+2020-09-22 20:51:51,667 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:51:51,688 p=8849 u=mosipuser n=ansible | TASK [helm : Check if ingress-nginx is already running] **************************************************************************************
+2020-09-22 20:51:52,083 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:51:52,102 p=8849 u=mosipuser n=ansible | TASK [helm : debug] **************************************************************************************************************************
+2020-09-22 20:51:52,116 p=8849 u=mosipuser n=ansible | skipping: [console.sb]
+2020-09-22 20:51:52,137 p=8849 u=mosipuser n=ansible | TASK [helm : Install chart ingress-nginx] ****************************************************************************************************
+2020-09-22 20:52:48,866 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:52:48,885 p=8849 u=mosipuser n=ansible | TASK [helm : debug] **************************************************************************************************************************
+2020-09-22 20:52:48,906 p=8849 u=mosipuser n=ansible | ok: [console.sb] => {
+    "msg": "NAME: ingress-nginx\nLAST DEPLOYED: Tue Sep 22 20:51:52 2020\nNAMESPACE: ingress-nginx\nSTATUS: deployed\nREVISION: 1\nTEST SUITE: None"
+}
+2020-09-22 20:52:48,910 p=8849 u=mosipuser n=ansible | PLAY [console] *******************************************************************************************************************************
+2020-09-22 20:52:48,933 p=8849 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 20:52:49,511 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:52:49,531 p=8849 u=mosipuser n=ansible | TASK [k8scluster/dashboard : Create dashboard yml from template] *****************************************************************************
+2020-09-22 20:52:50,121 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:52:50,143 p=8849 u=mosipuser n=ansible | TASK [k8scluster/dashboard : Create mz dashboard] ********************************************************************************************
+2020-09-22 20:52:50,907 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:52:50,927 p=8849 u=mosipuser n=ansible | TASK [k8scluster/dashboard : Get dashboard token] ********************************************************************************************
+2020-09-22 20:52:51,429 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:52:51,448 p=8849 u=mosipuser n=ansible | TASK [k8scluster/dashboard : debug] **********************************************************************************************************
+2020-09-22 20:52:51,464 p=8849 u=mosipuser n=ansible | ok: [console.sb] => {
+    "msg": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkxZVXBfWjAyS2xpVnp3NjlOMmlwNWlJY2xDaWJ1XzI2V3lHOEJfNHhZSzAifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJhZG1pbi11c2VyLXRva2VuLXd6ZHBuIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6ImFkbWluLXVzZXIiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiI1ZTIwYTEyZi1lNzdlLTQ0NGYtYTUwNC05OTZiNDRmOWI0ZWYiLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6a3ViZXJuZXRlcy1kYXNoYm9hcmQ6YWRtaW4tdXNlciJ9.Do1AVgEPH4vZ8QkAFIZco7qAQZMfiBh3wxoMnhM-IonEwOlOxPxYpOltV1e9yHDI0xEkBbyQVdahMHuQAYYX5L5zI0ejZ6YhCXjYXqpJjG5grZjkwBMuU7QaKtBSKyKQ5vSoD9HOYJXv8Cq5dursrthz1A-3b58nDj9rM6Wekgq1Rka5xMtB_582bpjv7G3TVE8KV0A4-U7iGrSFIXgJeDmBqyIGrzdPpaECWBNSzbnSo-pUC-Gf2HUMAUqwvOYuvAHODdZu5wZ5Y7BbF_Uz9BXztNlG4Z0A4-hQ2dgK1UmarenaDqI-EbubCmU595QabsSufZOuQ_836FssjatgsQ"
+}
+2020-09-22 20:52:51,497 p=8849 u=mosipuser n=ansible | TASK [k8scluster/dashboard : Copy the token to /tmp/mosip/dashboard_mz.token] ****************************************************************
+2020-09-22 20:52:52,084 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:52:52,088 p=8849 u=mosipuser n=ansible | PLAY [console] *******************************************************************************************************************************
+2020-09-22 20:52:52,109 p=8849 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 20:52:52,703 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:52:52,722 p=8849 u=mosipuser n=ansible | TASK [Create a k8s namespace] ****************************************************************************************************************
+2020-09-22 20:52:53,462 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:52:53,465 p=8849 u=mosipuser n=ansible | PLAY [console] *******************************************************************************************************************************
+2020-09-22 20:52:53,489 p=8849 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 20:52:54,076 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:52:54,096 p=8849 u=mosipuser n=ansible | TASK [helm : include_vars] *******************************************************************************************************************
+2020-09-22 20:52:54,124 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:52:54,144 p=8849 u=mosipuser n=ansible | TASK [helm : Convert values template to values file] *****************************************************************************************
+2020-09-22 20:52:54,156 p=8849 u=mosipuser n=ansible | skipping: [console.sb]
+2020-09-22 20:52:54,178 p=8849 u=mosipuser n=ansible | TASK [helm : Check if metrics-server is already running] *************************************************************************************
+2020-09-22 20:52:54,552 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:52:54,571 p=8849 u=mosipuser n=ansible | TASK [helm : debug] **************************************************************************************************************************
+2020-09-22 20:52:54,586 p=8849 u=mosipuser n=ansible | skipping: [console.sb]
+2020-09-22 20:52:54,608 p=8849 u=mosipuser n=ansible | TASK [helm : Install chart metrics-server] ***************************************************************************************************
+2020-09-22 20:53:37,261 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:53:37,281 p=8849 u=mosipuser n=ansible | TASK [helm : debug] **************************************************************************************************************************
+2020-09-22 20:53:37,299 p=8849 u=mosipuser n=ansible | ok: [console.sb] => {
+    "msg": "NAME: metrics-server\nLAST DEPLOYED: Tue Sep 22 20:52:55 2020\nNAMESPACE: monitoring\nSTATUS: deployed\nREVISION: 1\nNOTES:\nThe metric server has been deployed. \n\nIn a few minutes you should be able to list metrics using the following\ncommand:\n\n  kubectl get --raw \"/apis/metrics.k8s.io/v1beta1/nodes\""
+}
+2020-09-22 20:53:37,302 p=8849 u=mosipuser n=ansible | PLAY [nfsserver] *****************************************************************************************************************************
+2020-09-22 20:53:37,324 p=8849 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 20:53:37,915 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:53:37,934 p=8849 u=mosipuser n=ansible | TASK [Create NFS folder] *********************************************************************************************************************
+2020-09-22 20:53:38,293 p=8849 u=mosipuser n=ansible | changed: [console.sb] => (item={u'key': u'server_path', u'value': u'/srv/nfs/mosip/monitoring/mz/prometheus/server'})
+2020-09-22 20:53:38,612 p=8849 u=mosipuser n=ansible | changed: [console.sb] => (item={u'key': u'alert_path', u'value': u'/srv/nfs/mosip/monitoring/mz/prometheus/alertmanager'})
+2020-09-22 20:53:38,929 p=8849 u=mosipuser n=ansible | changed: [console.sb] => (item={u'key': u'push_path', u'value': u'/srv/nfs/mosip/monitoring/mz/prometheus/pushgateway'})
+2020-09-22 20:53:38,934 p=8849 u=mosipuser n=ansible | PLAY [console] *******************************************************************************************************************************
+2020-09-22 20:53:38,955 p=8849 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 20:53:39,539 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:53:39,558 p=8849 u=mosipuser n=ansible | TASK [Create a k8s namespace] ****************************************************************************************************************
+2020-09-22 20:53:40,304 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:53:40,307 p=8849 u=mosipuser n=ansible | PLAY [console] *******************************************************************************************************************************
+2020-09-22 20:53:40,330 p=8849 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 20:53:40,908 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:53:40,927 p=8849 u=mosipuser n=ansible | TASK [helm : include_vars] *******************************************************************************************************************
+2020-09-22 20:53:40,954 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:53:40,973 p=8849 u=mosipuser n=ansible | TASK [helm : Convert values template to values file] *****************************************************************************************
+2020-09-22 20:53:41,582 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:53:41,603 p=8849 u=mosipuser n=ansible | TASK [helm : Check if prom is already running] ***********************************************************************************************
+2020-09-22 20:53:41,991 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:53:42,011 p=8849 u=mosipuser n=ansible | TASK [helm : debug] **************************************************************************************************************************
+2020-09-22 20:53:42,025 p=8849 u=mosipuser n=ansible | skipping: [console.sb]
+2020-09-22 20:53:42,046 p=8849 u=mosipuser n=ansible | TASK [helm : Install chart prom] *************************************************************************************************************
+2020-09-22 20:54:44,989 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:54:45,008 p=8849 u=mosipuser n=ansible | TASK [helm : debug] **************************************************************************************************************************
+2020-09-22 20:54:45,029 p=8849 u=mosipuser n=ansible | ok: [console.sb] => {
+    "msg": "NAME: prom\nLAST DEPLOYED: Tue Sep 22 20:53:42 2020\nNAMESPACE: monitoring\nSTATUS: deployed\nREVISION: 1\nTEST SUITE: None\nNOTES:\nThe Prometheus server can be accessed via port 80 on the following DNS name from within your cluster:\nprom-prometheus-server.monitoring.svc.cluster.local\n\n\nGet the Prometheus server URL by running these commands in the same shell:\n  export POD_NAME=$(kubectl get pods --namespace monitoring -l \"app=prometheus,component=server\" -o jsonpath=\"{.items[0].metadata.name}\")\n  kubectl --namespace monitoring port-forward $POD_NAME 9090\n\n\nThe Prometheus alertmanager can be accessed via port 80 on the following DNS name from within your cluster:\nprom-prometheus-alertmanager.monitoring.svc.cluster.local\n\n\nGet the Alertmanager URL by running these commands in the same shell:\n  export POD_NAME=$(kubectl get pods --namespace monitoring -l \"app=prometheus,component=alertmanager\" -o jsonpath=\"{.items[0].metadata.name}\")\n  kubectl --namespace monitoring port-forward $POD_NAME 9093\n#################################################################################\n######   WARNING: Pod Security Policy has been moved to a global property.  #####\n######            use .Values.podSecurityPolicy.enabled with pod-based      #####\n######            annotations                                               #####\n######            (e.g. .Values.nodeExporter.podSecurityPolicy.annotations) #####\n#################################################################################\n\n\nThe Prometheus PushGateway can be accessed via port 9091 on the following DNS name from within your cluster:\nprom-prometheus-pushgateway.monitoring.svc.cluster.local\n\n\nGet the PushGateway URL by running these commands in the same shell:\n  export POD_NAME=$(kubectl get pods --namespace monitoring -l \"app=prometheus,component=pushgateway\" -o jsonpath=\"{.items[0].metadata.name}\")\n  kubectl --namespace monitoring port-forward $POD_NAME 9091\n\nFor more information on running Prometheus, visit:\nhttps://prometheus.io/"
+}
+2020-09-22 20:54:45,032 p=8849 u=mosipuser n=ansible | PLAY [nfsserver] *****************************************************************************************************************************
+2020-09-22 20:54:45,053 p=8849 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 20:54:45,645 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:54:45,664 p=8849 u=mosipuser n=ansible | TASK [Create NFS folder] *********************************************************************************************************************
+2020-09-22 20:54:46,021 p=8849 u=mosipuser n=ansible | changed: [console.sb] => (item={u'key': u'path', u'value': u'/srv/nfs/mosip/monitoring/mz/grafana'})
+2020-09-22 20:54:46,025 p=8849 u=mosipuser n=ansible | PLAY [console] *******************************************************************************************************************************
+2020-09-22 20:54:46,045 p=8849 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 20:54:46,627 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:54:46,645 p=8849 u=mosipuser n=ansible | TASK [Create a k8s namespace] ****************************************************************************************************************
+2020-09-22 20:54:47,398 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:54:47,401 p=8849 u=mosipuser n=ansible | PLAY [console] *******************************************************************************************************************************
+2020-09-22 20:54:47,422 p=8849 u=mosipuser n=ansible | TASK [Apply grafana custom config] ***********************************************************************************************************
+2020-09-22 20:54:48,193 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:54:48,196 p=8849 u=mosipuser n=ansible | PLAY [console] *******************************************************************************************************************************
+2020-09-22 20:54:48,220 p=8849 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 20:54:48,800 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:54:48,819 p=8849 u=mosipuser n=ansible | TASK [helm : include_vars] *******************************************************************************************************************
+2020-09-22 20:54:48,847 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:54:48,866 p=8849 u=mosipuser n=ansible | TASK [helm : Convert values template to values file] *****************************************************************************************
+2020-09-22 20:54:49,467 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:54:49,488 p=8849 u=mosipuser n=ansible | TASK [helm : Check if graf is already running] ***********************************************************************************************
+2020-09-22 20:54:49,880 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:54:49,901 p=8849 u=mosipuser n=ansible | TASK [helm : debug] **************************************************************************************************************************
+2020-09-22 20:54:49,915 p=8849 u=mosipuser n=ansible | skipping: [console.sb]
+2020-09-22 20:54:49,936 p=8849 u=mosipuser n=ansible | TASK [helm : Install chart graf] *************************************************************************************************************
+2020-09-22 20:55:27,006 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:55:27,025 p=8849 u=mosipuser n=ansible | TASK [helm : debug] **************************************************************************************************************************
+2020-09-22 20:55:27,046 p=8849 u=mosipuser n=ansible | ok: [console.sb] => {
+    "msg": "WARNING: This chart is deprecated\nNAME: graf\nLAST DEPLOYED: Tue Sep 22 20:54:52 2020\nNAMESPACE: monitoring\nSTATUS: deployed\nREVISION: 1\nNOTES:\n*******************\n****DEPRECATED*****\n*******************\n* The chart is deprecated. Future development has been moved to https://github.com/grafana/helm2-grafana\n\n1. Get your 'admin' user password by running:\n\n   kubectl get secret --namespace monitoring graf-grafana -o jsonpath=\"{.data.admin-password}\" | base64 --decode ; echo\n\n2. The Grafana server can be accessed via port 80 on the following DNS name from within your cluster:\n\n   graf-grafana.monitoring.svc.cluster.local\n\n   If you bind grafana to 80, please update values in values.yaml and reinstall:\n   ```\n   securityContext:\n     runAsUser: 0\n     runAsGroup: 0\n     fsGroup: 0\n\n   command:\n   - \"setcap\"\n   - \"'cap_net_bind_service=+ep'\"\n   - \"/usr/sbin/grafana-server &&\"\n   - \"sh\"\n   - \"/run.sh\"\n   ```\n   Details refer to https://grafana.com/docs/installation/configuration/#http-port.\n   Or grafana would always crash.\n\n   From outside the cluster, the server URL(s) are:\n\n\n3. Login with the password from step 1 and the username: admin\n#################################################################################\n######   WARNING: Persistence is disabled!!! You will lose your data when   #####\n######            the Grafana pod is terminated.                            #####\n#################################################################################"
+}
+2020-09-22 20:55:27,065 p=8849 u=mosipuser n=ansible | TASK [Get grafana token] *********************************************************************************************************************
+2020-09-22 20:55:27,459 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:55:27,477 p=8849 u=mosipuser n=ansible | TASK [debug] *********************************************************************************************************************************
+2020-09-22 20:55:27,493 p=8849 u=mosipuser n=ansible | ok: [console.sb] => {
+    "msg": "OjSFKeFRoT5gPCwsFZzBC7NIZ1JeT5xqfuQBOYgL"
+}
+2020-09-22 20:55:27,526 p=8849 u=mosipuser n=ansible | TASK [Copy token to /tmp/mosip/grafana_mz.token] *********************************************************************************************
+2020-09-22 20:55:28,116 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:55:28,120 p=8849 u=mosipuser n=ansible | PLAY [console] *******************************************************************************************************************************
+2020-09-22 20:55:28,143 p=8849 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 20:55:28,734 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:55:28,754 p=8849 u=mosipuser n=ansible | TASK [helm : include_vars] *******************************************************************************************************************
+2020-09-22 20:55:28,783 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 20:55:28,803 p=8849 u=mosipuser n=ansible | TASK [helm : Convert values template to values file] *****************************************************************************************
+2020-09-22 20:55:28,815 p=8849 u=mosipuser n=ansible | skipping: [console.sb]
+2020-09-22 20:55:28,837 p=8849 u=mosipuser n=ansible | TASK [helm : Check if elasticsearch is already running] **************************************************************************************
+2020-09-22 20:55:29,230 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 20:55:29,250 p=8849 u=mosipuser n=ansible | TASK [helm : debug] **************************************************************************************************************************
+2020-09-22 20:55:29,264 p=8849 u=mosipuser n=ansible | skipping: [console.sb]
+2020-09-22 20:55:29,286 p=8849 u=mosipuser n=ansible | TASK [helm : Install chart elasticsearch] ****************************************************************************************************
+2020-09-22 21:11:27,977 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 21:11:27,997 p=8849 u=mosipuser n=ansible | TASK [helm : debug] **************************************************************************************************************************
+2020-09-22 21:11:28,017 p=8849 u=mosipuser n=ansible | ok: [console.sb] => {
+    "msg": "NAME: elasticsearch\nLAST DEPLOYED: Tue Sep 22 20:55:29 2020\nNAMESPACE: monitoring\nSTATUS: deployed\nREVISION: 1\nNOTES:\n1. Watch all cluster members come up.\n  $ kubectl get pods --namespace=monitoring -l app=elasticsearch-master -w\n2. Test cluster health using Helm test.\n  $ helm test elasticsearch --cleanup"
+}
+2020-09-22 21:11:28,020 p=8849 u=mosipuser n=ansible | PLAY [console] *******************************************************************************************************************************
+2020-09-22 21:11:28,043 p=8849 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 21:11:28,630 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 21:11:28,649 p=8849 u=mosipuser n=ansible | TASK [helm : include_vars] *******************************************************************************************************************
+2020-09-22 21:11:28,678 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 21:11:28,696 p=8849 u=mosipuser n=ansible | TASK [helm : Convert values template to values file] *****************************************************************************************
+2020-09-22 21:11:28,709 p=8849 u=mosipuser n=ansible | skipping: [console.sb]
+2020-09-22 21:11:28,731 p=8849 u=mosipuser n=ansible | TASK [helm : Check if kibana is already running] *********************************************************************************************
+2020-09-22 21:11:29,140 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 21:11:29,160 p=8849 u=mosipuser n=ansible | TASK [helm : debug] **************************************************************************************************************************
+2020-09-22 21:11:29,174 p=8849 u=mosipuser n=ansible | skipping: [console.sb]
+2020-09-22 21:11:29,196 p=8849 u=mosipuser n=ansible | TASK [helm : Install chart kibana] ***********************************************************************************************************
+2020-09-22 21:15:27,822 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 21:15:27,842 p=8849 u=mosipuser n=ansible | TASK [helm : debug] **************************************************************************************************************************
+2020-09-22 21:15:27,864 p=8849 u=mosipuser n=ansible | ok: [console.sb] => {
+    "msg": "NAME: kibana\nLAST DEPLOYED: Tue Sep 22 21:11:29 2020\nNAMESPACE: monitoring\nSTATUS: deployed\nREVISION: 1\nTEST SUITE: None"
+}
+2020-09-22 21:15:27,868 p=8849 u=mosipuser n=ansible | PLAY [console] *******************************************************************************************************************************
+2020-09-22 21:15:27,902 p=8849 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 21:15:28,502 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 21:15:28,521 p=8849 u=mosipuser n=ansible | TASK [helm : include_vars] *******************************************************************************************************************
+2020-09-22 21:15:28,551 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 21:15:28,570 p=8849 u=mosipuser n=ansible | TASK [helm : Convert values template to values file] *****************************************************************************************
+2020-09-22 21:15:29,174 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 21:15:29,195 p=8849 u=mosipuser n=ansible | TASK [helm : Check if filebeat is already running] *******************************************************************************************
+2020-09-22 21:15:29,599 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 21:15:29,618 p=8849 u=mosipuser n=ansible | TASK [helm : debug] **************************************************************************************************************************
+2020-09-22 21:15:29,631 p=8849 u=mosipuser n=ansible | skipping: [console.sb]
+2020-09-22 21:15:29,653 p=8849 u=mosipuser n=ansible | TASK [helm : Install chart filebeat] *********************************************************************************************************
+2020-09-22 21:16:06,774 p=8849 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 21:16:06,794 p=8849 u=mosipuser n=ansible | TASK [helm : debug] **************************************************************************************************************************
+2020-09-22 21:16:06,814 p=8849 u=mosipuser n=ansible | ok: [console.sb] => {
+    "msg": "NAME: filebeat\nLAST DEPLOYED: Tue Sep 22 21:15:30 2020\nNAMESPACE: monitoring\nSTATUS: deployed\nREVISION: 1\nTEST SUITE: None\nNOTES:\n1. Watch all containers come up.\n  $ kubectl get pods --namespace=monitoring -l app=filebeat-filebeat -w"
+}
+2020-09-22 21:16:06,818 p=8849 u=mosipuser n=ansible | PLAY [console] *******************************************************************************************************************************
+2020-09-22 21:16:06,838 p=8849 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 21:16:07,420 p=8849 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 21:16:07,439 p=8849 u=mosipuser n=ansible | TASK [Enable postgres taint] *****************************************************************************************************************
+2020-09-22 21:16:07,465 p=8849 u=mosipuser n=ansible | skipping: [console.sb]
+2020-09-22 21:16:07,484 p=8849 u=mosipuser n=ansible | TASK [Disable postgres taint] ****************************************************************************************************************
+2020-09-22 21:16:07,906 p=8849 u=mosipuser n=ansible | fatal: [console.sb]: FAILED! => {"changed": true, "cmd": "kubectl --kubeconfig /home/mosipuser/.kube/mzcluster.config taint nodes mzworker0.sb postgres:NoSchedule-", "delta": "0:00:00.086341", "end": "2020-09-22 21:16:07.867294", "msg": "non-zero return code", "rc": 1, "start": "2020-09-22 21:16:07.780953", "stderr": "error: taint \"postgres:NoSchedule\" not found", "stderr_lines": ["error: taint \"postgres:NoSchedule\" not found"], "stdout": "", "stdout_lines": []}
+2020-09-22 21:16:07,906 p=8849 u=mosipuser n=ansible | ...ignoring
+2020-09-22 21:16:07,925 p=8849 u=mosipuser n=ansible | TASK [Enable hdfs taint] *********************************************************************************************************************
+2020-09-22 21:16:07,938 p=8849 u=mosipuser n=ansible | fatal: [console.sb]: FAILED! => {"msg": "The conditional check 'hdfs.node_affinity.enabled == true' failed. The error was: error while evaluating conditional (hdfs.node_affinity.enabled == true): 'hdfs' is undefined\n\nThe error appears to be in '/home/mosipuser/mosip-infra/deployment/sandbox-v2/playbooks/taints.yml': line 24, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n    # Enable hdfs  taint\n    - name: Enable hdfs taint\n      ^ here\n"}
+2020-09-22 21:16:07,939 p=8849 u=mosipuser n=ansible | PLAY RECAP ***********************************************************************************************************************************
+2020-09-22 21:16:07,940 p=8849 u=mosipuser n=ansible | console.sb                 : ok=114  changed=63   unreachable=0    failed=1    skipped=12   rescued=0    ignored=1   
+2020-09-22 21:16:07,940 p=8849 u=mosipuser n=ansible | mzmaster.sb                : ok=40   changed=27   unreachable=0    failed=0    skipped=28   rescued=0    ignored=1   
+2020-09-22 21:16:07,940 p=8849 u=mosipuser n=ansible | mzworker0.sb               : ok=27   changed=17   unreachable=0    failed=0    skipped=27   rescued=0    ignored=0   
+2020-09-22 21:16:07,940 p=8849 u=mosipuser n=ansible | mzworker1.sb               : ok=26   changed=16   unreachable=0    failed=0    skipped=27   rescued=0    ignored=0   
+2020-09-22 21:18:30,765 p=21217 u=mosipuser n=ansible | PLAY [console] *******************************************************************************************************************************
+2020-09-22 21:18:30,779 p=21217 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 21:18:32,299 p=21217 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 21:18:32,318 p=21217 u=mosipuser n=ansible | TASK [Enable postgres taint] *****************************************************************************************************************
+2020-09-22 21:18:32,419 p=21217 u=mosipuser n=ansible | skipping: [console.sb]
+2020-09-22 21:18:32,438 p=21217 u=mosipuser n=ansible | TASK [Disable postgres taint] ****************************************************************************************************************
+2020-09-22 21:18:33,257 p=21217 u=mosipuser n=ansible | fatal: [console.sb]: FAILED! => {"changed": true, "cmd": "kubectl --kubeconfig /home/mosipuser/.kube/mzcluster.config taint nodes mzworker0.sb postgres:NoSchedule-", "delta": "0:00:00.088215", "end": "2020-09-22 21:18:33.219204", "msg": "non-zero return code", "rc": 1, "start": "2020-09-22 21:18:33.130989", "stderr": "error: taint \"postgres:NoSchedule\" not found", "stderr_lines": ["error: taint \"postgres:NoSchedule\" not found"], "stdout": "", "stdout_lines": []}
+2020-09-22 21:18:33,257 p=21217 u=mosipuser n=ansible | ...ignoring
+2020-09-22 21:18:33,259 p=21217 u=mosipuser n=ansible | PLAY RECAP ***********************************************************************************************************************************
+2020-09-22 21:18:33,259 p=21217 u=mosipuser n=ansible | console.sb                 : ok=2    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=1   
+2020-09-22 21:18:52,579 p=21461 u=mosipuser n=ansible | PLAY [nfsserver] *****************************************************************************************************************************
+2020-09-22 21:18:52,594 p=21461 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 21:18:53,736 p=21461 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 21:18:53,755 p=21461 u=mosipuser n=ansible | TASK [Create folder] *************************************************************************************************************************
+2020-09-22 21:18:54,412 p=21461 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 21:18:54,416 p=21461 u=mosipuser n=ansible | PLAY [console] *******************************************************************************************************************************
+2020-09-22 21:18:54,484 p=21461 u=mosipuser n=ansible | TASK [Create logs folder /tmp/mosip/logs] ****************************************************************************************************
+2020-09-22 21:18:54,803 p=21461 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 21:18:54,807 p=21461 u=mosipuser n=ansible | PLAY [console] *******************************************************************************************************************************
+2020-09-22 21:18:54,830 p=21461 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 21:18:55,410 p=21461 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 21:18:55,430 p=21461 u=mosipuser n=ansible | TASK [helm : include_vars] *******************************************************************************************************************
+2020-09-22 21:18:55,458 p=21461 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 21:18:55,478 p=21461 u=mosipuser n=ansible | TASK [helm : Convert values template to values file] *****************************************************************************************
+2020-09-22 21:18:56,568 p=21461 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 21:18:56,589 p=21461 u=mosipuser n=ansible | TASK [helm : Check if postgres is already running] *******************************************************************************************
+2020-09-22 21:18:57,224 p=21461 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 21:18:57,243 p=21461 u=mosipuser n=ansible | TASK [helm : debug] **************************************************************************************************************************
+2020-09-22 21:18:57,257 p=21461 u=mosipuser n=ansible | skipping: [console.sb]
+2020-09-22 21:18:57,278 p=21461 u=mosipuser n=ansible | TASK [helm : Install chart postgres] *********************************************************************************************************
+2020-09-22 21:19:33,907 p=21461 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 21:19:33,926 p=21461 u=mosipuser n=ansible | TASK [helm : debug] **************************************************************************************************************************
+2020-09-22 21:19:33,945 p=21461 u=mosipuser n=ansible | ok: [console.sb] => {
+    "msg": "NAME: postgres\nLAST DEPLOYED: Tue Sep 22 21:18:57 2020\nNAMESPACE: default\nSTATUS: deployed\nREVISION: 1\nTEST SUITE: None"
+}
+2020-09-22 21:19:33,965 p=21461 u=mosipuser n=ansible | TASK [Waiting for postgres to install completely.] *******************************************************************************************
+2020-09-22 21:19:33,975 p=22224 u=mosipuser n=ansible | Pausing for 30 seconds
+2020-09-22 21:19:33,975 p=22224 u=mosipuser n=ansible | (ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+2020-09-22 21:20:03,978 p=21461 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 21:20:03,981 p=21461 u=mosipuser n=ansible | PLAY [console] *******************************************************************************************************************************
+2020-09-22 21:20:04,002 p=21461 u=mosipuser n=ansible | TASK [Select query to db acme with positional arguments and non-default credentials] *********************************************************
+2020-09-22 21:20:04,621 p=21461 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 21:20:04,641 p=21461 u=mosipuser n=ansible | TASK [set_fact] ******************************************************************************************************************************
+2020-09-22 21:20:04,653 p=21461 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 21:20:04,672 p=21461 u=mosipuser n=ansible | TASK [set_fact] ******************************************************************************************************************************
+2020-09-22 21:20:04,686 p=21461 u=mosipuser n=ansible | skipping: [console.sb]
+2020-09-22 21:20:04,690 p=21461 u=mosipuser n=ansible | PLAY [console] *******************************************************************************************************************************
+2020-09-22 21:20:04,713 p=21461 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 21:20:05,306 p=21461 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 21:20:05,325 p=21461 u=mosipuser n=ansible | TASK [Check out git repos] *******************************************************************************************************************
+2020-09-22 21:20:05,336 p=21461 u=mosipuser n=ansible | fatal: [console.sb]: FAILED! => {"msg": "dict2items requires a dictionary, got <class 'ansible.template.AnsibleUndefined'> instead."}
+2020-09-22 21:20:05,337 p=21461 u=mosipuser n=ansible | PLAY RECAP ***********************************************************************************************************************************
+2020-09-22 21:20:05,337 p=21461 u=mosipuser n=ansible | console.sb                 : ok=13   changed=4    unreachable=0    failed=1    skipped=2    rescued=0    ignored=0   
+2020-09-22 22:11:05,945 p=1019 u=mosipuser n=ansible | PLAY [console] *******************************************************************************************************************************
+2020-09-22 22:11:05,961 p=1019 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 22:11:07,498 p=1019 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 22:11:07,518 p=1019 u=mosipuser n=ansible | TASK [helm : include_vars] *******************************************************************************************************************
+2020-09-22 22:11:07,623 p=1019 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 22:11:07,641 p=1019 u=mosipuser n=ansible | TASK [helm : Convert values template to values file] *****************************************************************************************
+2020-09-22 22:11:08,889 p=1019 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 22:11:08,951 p=1019 u=mosipuser n=ansible | TASK [helm : Check if idrepo is already running] *********************************************************************************************
+2020-09-22 22:11:09,631 p=1019 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 22:11:09,650 p=1019 u=mosipuser n=ansible | TASK [helm : debug] **************************************************************************************************************************
+2020-09-22 22:11:09,664 p=1019 u=mosipuser n=ansible | skipping: [console.sb]
+2020-09-22 22:11:09,685 p=1019 u=mosipuser n=ansible | TASK [helm : Install chart idrepo] ***********************************************************************************************************
+2020-09-22 22:11:10,268 p=1019 u=mosipuser n=ansible | fatal: [console.sb]: FAILED! => {"changed": true, "cmd": ["/home/mosipuser/bin/helm", "--kubeconfig", "/home/mosipuser/.kube/mzcluster.config", "install", "idrepo", "/home/mosipuser/mosip-infra/deployment/sandbox-v2/helm/charts/idrepo", "-f", "/home/mosipuser/mosip-infra/deployment/sandbox-v2/helm/charts/idrepo/values.yaml", "-n", "default", "--wait", "--timeout", "20m0s"], "delta": "0:00:00.167001", "end": "2020-09-22 22:11:10.227766", "msg": "non-zero return code", "rc": 1, "start": "2020-09-22 22:11:10.060765", "stderr": "Error: template: idrepo/templates/identity-dep.yaml:34:12: executing \"idrepo/templates/identity-dep.yaml\" at <include \"logger.mount\" .>: error calling include: template: no template \"logger.mount\" associated with template \"gotpl\"", "stderr_lines": ["Error: template: idrepo/templates/identity-dep.yaml:34:12: executing \"idrepo/templates/identity-dep.yaml\" at <include \"logger.mount\" .>: error calling include: template: no template \"logger.mount\" associated with template \"gotpl\""], "stdout": "", "stdout_lines": []}
+2020-09-22 22:11:10,269 p=1019 u=mosipuser n=ansible | PLAY RECAP ***********************************************************************************************************************************
+2020-09-22 22:11:10,269 p=1019 u=mosipuser n=ansible | console.sb                 : ok=4    changed=2    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2020-09-22 22:15:38,768 p=1559 u=mosipuser n=ansible | PLAY [console] *******************************************************************************************************************************
+2020-09-22 22:15:38,786 p=1559 u=mosipuser n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2020-09-22 22:15:40,317 p=1559 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 22:15:40,337 p=1559 u=mosipuser n=ansible | TASK [helm : include_vars] *******************************************************************************************************************
+2020-09-22 22:15:40,440 p=1559 u=mosipuser n=ansible | ok: [console.sb]
+2020-09-22 22:15:40,459 p=1559 u=mosipuser n=ansible | TASK [helm : Convert values template to values file] *****************************************************************************************
+2020-09-22 22:15:41,731 p=1559 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 22:15:41,793 p=1559 u=mosipuser n=ansible | TASK [helm : Check if idrepo is already running] *********************************************************************************************
+2020-09-22 22:15:42,474 p=1559 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 22:15:42,493 p=1559 u=mosipuser n=ansible | TASK [helm : debug] **************************************************************************************************************************
+2020-09-22 22:15:42,506 p=1559 u=mosipuser n=ansible | skipping: [console.sb]
+2020-09-22 22:15:42,528 p=1559 u=mosipuser n=ansible | TASK [helm : Install chart idrepo] ***********************************************************************************************************
+2020-09-22 22:19:29,258 p=1559 u=mosipuser n=ansible | changed: [console.sb]
+2020-09-22 22:19:29,276 p=1559 u=mosipuser n=ansible | TASK [helm : debug] **************************************************************************************************************************
+2020-09-22 22:19:29,297 p=1559 u=mosipuser n=ansible | ok: [console.sb] => {
+    "msg": "NAME: idrepo\nLAST DEPLOYED: Tue Sep 22 22:15:43 2020\nNAMESPACE: default\nSTATUS: deployed\nREVISION: 1\nTEST SUITE: None"
+}
+2020-09-22 22:19:29,299 p=1559 u=mosipuser n=ansible | PLAY RECAP ***********************************************************************************************************************************
+2020-09-22 22:19:29,299 p=1559 u=mosipuser n=ansible | console.sb                 : ok=6    changed=3    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
